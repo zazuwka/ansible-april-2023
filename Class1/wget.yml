@@ -1,0 +1,19 @@
+- hosts: all
+  tasks: 
+  - name: install packages
+    yum:
+      name:
+        - vim
+        - git
+        - tree
+      state: latest
+  - name: Download wget package but do not install it
+    yum:
+      name: wget
+      state: latest
+      download_only: true
+  
+  - name: install wget rpm from a local file
+    yum:
+      name: /var/cache/yum/x86_64/7/base/packages/wget-1.14-18.el7_6.1.x86_64.rpm
+      state: present

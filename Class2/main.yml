@@ -1,0 +1,25 @@
+- hosts: all
+  tasks: 
+  - name:
+    yum:
+      name: tree
+      state: present
+    notify: Restart httpd
+
+  - name: Install git
+    yum:
+      name: git
+      state: present
+    notify: Install wget
+
+  handlers: 
+  - name: Restart httpd
+    service:
+      name: httpd
+      state: restarted
+
+  - name: Install wget
+    yum:
+      name: wget
+      state: present
+

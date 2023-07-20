@@ -1,0 +1,11 @@
+- debug:
+    msg: "Hello from Ubuntu"
+
+- name: Update repositories cache
+  apt:
+    update_cache: yes
+
+- name: Install Apache
+  apt:
+    name: apache2
+    state: present

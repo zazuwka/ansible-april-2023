@@ -1,0 +1,10 @@
+- hosts: all
+  tasks:
+
+  - name: ensure a list of packages installed
+    yum:
+      name: "{{ packages }}"
+    vars:
+      packages:
+      - vim
+      - unzip

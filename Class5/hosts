@@ -1,0 +1,15 @@
+[web]
+
+master ansible_host=161.35.124.158
+
+worker1 ansible_host=206.81.6.211
+
+[aws]
+
+worker2 ansible_host=18.216.220.191     ansible_user=ec2-user
+
+worker3 ansible_host=3.134.101.42       ansible_user=ec2-user
+
+[gcp]
+
+worker4 ansible_host=34.125.167.51       ansible_user=aziz_arziev
